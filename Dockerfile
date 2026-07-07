@@ -75,7 +75,8 @@ COPY . .
 EXPOSE 8501
 
 # Command to run the application
-CMD ["streamlit", "run", "./webui/Main.py","--browser.serverAddress=127.0.0.1","--server.enableCORS=True","--browser.gatherUsageStats=False","--server.showEmailPrompt=False"]
+RUN cp -n config.example.toml config.toml || true
+CMD ["streamlit","run","./webui/Main.py","--server.address=0.0.0.0","--server.port=8501","--server.headless=true","--server.enableCORS=false","--server.enableXsrfProtection=false","--browser.gatherUsageStats=false"]
 
 # 1. Build the Docker image using the following command
 # docker build -t moneyprinterturbo .

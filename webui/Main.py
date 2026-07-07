@@ -28,16 +28,16 @@ from app.services import task as tm
 from app.utils import utils
 
 st.set_page_config(
-    page_title="MoneyPrinterTurbo",
+    page_title="Reels Engine",
     page_icon="🤖",
     layout="wide",
     initial_sidebar_state="auto",
     menu_items={
-        "Report a bug": "https://github.com/harry0703/MoneyPrinterTurbo/issues",
-        "About": "# MoneyPrinterTurbo\nSimply provide a topic or keyword for a video, and it will "
+        "Report a bug": "https://aiagentlbs.com",
+        "About": "# Reels Engine\nSimply provide a topic or keyword for a video, and it will "
         "automatically generate the video copy, video materials, video subtitles, "
         "and video background music before synthesizing a high-definition short "
-        "video.\n\nhttps://github.com/harry0703/MoneyPrinterTurbo",
+        "video.\n\nhttps://aiagentlbs.com",
     },
 )
 
@@ -88,7 +88,7 @@ locales = utils.load_locales(i18n_dir)
 title_col, lang_col = st.columns([3, 1])
 
 with title_col:
-    st.title(f"MoneyPrinterTurbo v{config.project_version}")
+    st.title(f"Reels Engine v{config.project_version}")
 
 with lang_col:
     display_languages = []
@@ -350,8 +350,8 @@ if not config.app.get("hide_config", False):
                             ##### Ollama配置说明
                             - **API Key**: 随便填写，比如 123
                             - **Base Url**: 一般为 http://localhost:11434/v1
-                                - 如果 `MoneyPrinterTurbo` 和 `Ollama` **不在同一台机器上**，需要填写 `Ollama` 机器的IP地址
-                                - 如果 `MoneyPrinterTurbo` 是 `Docker` 部署，建议填写 `http://host.docker.internal:11434/v1`{docker_hint}
+                                - 如果 `Reels Engine` 和 `Ollama` **不在同一台机器上**，需要填写 `Ollama` 机器的IP地址
+                                - 如果 `Reels Engine` 是 `Docker` 部署，建议填写 `http://host.docker.internal:11434/v1`{docker_hint}
                             - **Model Name**: 使用 `ollama list` 查看，比如 `qwen:7b`
                             """
 
